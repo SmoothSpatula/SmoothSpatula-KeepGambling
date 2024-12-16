@@ -2,7 +2,7 @@
 -- SmoothSpatula
 
 log.info("Successfully loaded ".._ENV["!guid"]..".")
-mods["RoRRModdingToolkit-RoRR_Modding_Toolkit"].auto() -- Loading the toolkit 
+mods["RoRRModdingToolkit-RoRR_Modding_Toolkit"].auto(true) -- Loading the toolkit 
 
 local set_shrines = function ()
     local shrines, exist = Instance.find_all(gm.constants.pInteractableShrine)
