@@ -1,10 +1,10 @@
 ﻿{
 	"name": "KEEP_GAMBLING",
-	"version_number": "1.0.1",
+	"version_number": "1.1.1",
 	"website_url": "https://github.com/SmoothSpatula/SmoothSpatula-KeepGambling",
 	"description": "Shrines do not break after giving out items. You can keep spending.",
 	"dependencies": [
-		"ReturnOfModding-ReturnOfModding-1.0.47",
-		"RoRRModdingToolkit-RoRR_Modding_Toolkit-1.1.21"
+		"ReturnOfModding-ReturnOfModding-1.1.19",
+		"ReturnsAPI-ReturnsAPI-0.1.54"
 	]
 }

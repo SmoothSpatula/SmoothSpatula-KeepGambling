@@ -1,12 +1,14 @@
--- Keep Gambling v1.0.0
+-- Keep Gambling v1.1.0
 -- SmoothSpatula
 
-log.info("Successfully loaded ".._ENV["!guid"]..".")
-mods["RoRRModdingToolkit-RoRR_Modding_Toolkit"].auto(true) -- Loading the toolkit 
+mods["LuaENVY-ENVY"].auto()
+mods["ReturnsAPI-ReturnsAPI"].auto{
+    namespace = "keepgambling",
+}
 
 local set_shrines = function ()
-    local shrines, exist = Instance.find_all(gm.constants.pInteractableShrine)
-    if exist then
+    local shrines = Instance.find_all(gm.constants.pInteractableShrine)
+    if shrines then
         for _, shrine in ipairs(shrines) do
             shrine.charges = 1000000
         end
@@ -14,6 +16,6 @@ local set_shrines = function ()
 end
 
 local initialize = function()
-    Callback.add("onStageStart", "KeepGambling-onStageStart", set_shrines)
+    Callback.add(Callback.ON_STAGE_START, set_shrines)
 end
-Initialize(initialize)
+Initialize.add_hotloadable(initialize)
