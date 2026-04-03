@@ -1,9 +1,9 @@
--- Keep Gambling v1.1.0
 -- SmoothSpatula
 
 mods["LuaENVY-ENVY"].auto()
 mods["ReturnsAPI-ReturnsAPI"].auto{
     namespace = "keepgambling",
+    mp        = true
 }
 
 local set_shrines = function ()
